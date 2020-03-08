@@ -27,7 +27,7 @@
         <variable name="emptyHandlers" type="com.ruesga.rview.model.EmptyState.EventHandlers" />
     </data>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    <com.ruesga.rview.misc.ThemedSwipeRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -107,5 +107,5 @@
                 android:focusable="false"
                 android:focusableInTouchMode="false" />
         </FrameLayout>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </com.ruesga.rview.misc.ThemedSwipeRefreshLayout>
 </layout>

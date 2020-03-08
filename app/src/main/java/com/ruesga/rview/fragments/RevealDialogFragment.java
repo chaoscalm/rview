@@ -25,6 +25,7 @@ import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AccelerateInterpolator;
 
+import com.ruesga.rview.R;
 import com.ruesga.rview.misc.AndroidHelper;
 
 import androidx.annotation.NonNull;
@@ -70,7 +71,7 @@ public abstract class RevealDialogFragment extends DialogFragment {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public final Dialog onCreateDialog(Bundle savedInstanceState) {
         //noinspection ConstantConditions
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.DialogTheme);
         buildDialog(builder, savedInstanceState);
         Dialog dialog = builder.create();
         if (AndroidHelper.isLollipopOrGreater()) {

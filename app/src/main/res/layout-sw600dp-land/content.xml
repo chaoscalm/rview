@@ -127,6 +127,7 @@
                             <FrameLayout
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
+                                android:background="@color/primaryBackgroundColor"
                                 app:bindLayoutWeight="@{model.useTowPane ? 0.35f : 1f}"
                                 tools:ignore="Suspicious0dp">
 

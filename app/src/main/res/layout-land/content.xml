@@ -88,7 +88,8 @@
                 <FrameLayout
                     android:id="@+id/content"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="match_parent"
+                    android:background="@color/primaryBackgroundColor"/>
 
                 <fr.castorflex.android.smoothprogressbar.SmoothProgressBar
                     android:layout_width="match_parent"

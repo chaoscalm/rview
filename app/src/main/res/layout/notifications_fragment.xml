@@ -24,7 +24,7 @@
         <variable name="empty" type="com.ruesga.rview.model.EmptyState" />
     </data>
 
-    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    <com.ruesga.rview.misc.ThemedSwipeRefreshLayout
         android:id="@+id/refresh"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -44,5 +44,5 @@
                 layout="@layout/empty_state"
                 app:model="@{empty}"/>
         </FrameLayout>
-    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </com.ruesga.rview.misc.ThemedSwipeRefreshLayout>
 </layout>

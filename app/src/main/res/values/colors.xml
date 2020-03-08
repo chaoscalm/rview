@@ -15,10 +15,10 @@
      limitations under the License.
  -->
 <resources>
-    <color name="primary">#05668d</color>
-    <color name="primaryDark">#044c69</color>
+    <color name="primary">@*android:color/accent_device_default_light</color>
+    <color name="primaryDark">@*android:color/accent_device_default_light</color>
     <color name="primaryDarkForeground">@color/primaryDark</color>
-    <color name="accent">#8d2205</color>
+    <color name="accent">@*android:color/accent_device_default_light</color>
     <color name="alert">#ceab56</color>
     <color name="overlay">#90000000</color>
     <color name="secondaryIconColor">#757575</color>
@@ -26,7 +26,7 @@
     <color name="rejected">#d32f2f</color>
     <color name="noscore">#757575</color>
     <color name="unscored">#cecece</color>
-    <color name="primaryBackgroundColor">#e0e0e0</color>
+    <color name="primaryBackgroundColor">#ffffff</color>
     <color name="selectedItem">#e3e8f7</color>
     <color name="translucentStatusBarColor">@android:color/transparent</color>
 

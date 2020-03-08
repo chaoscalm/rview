@@ -135,6 +135,7 @@
                 android:checked="@={model.isPrivate}"
                 app:bindToFeature="@{Features.CHANGE_FLAGS}"
                 app:bindToBoolean="@{Boolean.TRUE}"
+                android:textColor="?android:attr/textColorPrimary"
                 android:text="@string/create_new_change_is_private" />
 
             <androidx.appcompat.widget.SwitchCompat
@@ -144,6 +145,7 @@
                 android:checked="@={model.isWorkInProgress}"
                 app:bindToFeature="@{Features.CHANGE_FLAGS}"
                 app:bindToBoolean="@{Boolean.TRUE}"
+                android:textColor="?android:attr/textColorPrimary"
                 android:text="@string/create_new_change_is_wip" />
         </LinearLayout>
     </ScrollView>
