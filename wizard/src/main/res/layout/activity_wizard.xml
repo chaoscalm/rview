@@ -29,13 +29,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
+        android:background="@color/primaryBackgroundColor"
         tools:context=".WizardActivity">
 
         <LinearLayout
             android:id="@+id/page_header"
             android:layout_width="match_parent"
             android:layout_height="@dimen/wizard_actionbar_size"
-            android:background="?attr/colorPrimaryDark"
+            android:background="@color/accent"
             android:elevation="4dp"
             android:gravity="bottom"
             android:orientation="horizontal"
