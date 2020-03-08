@@ -28,6 +28,7 @@
     <color name="unscored">#cecece</color>
     <color name="primaryBackgroundColor">#ffffff</color>
     <color name="selectedItem">#e3e8f7</color>
+    <color name="menu_selectedItem">#10000000</color>
     <color name="translucentStatusBarColor">@android:color/transparent</color>
 
     <color name="success">#c88bc34a</color>

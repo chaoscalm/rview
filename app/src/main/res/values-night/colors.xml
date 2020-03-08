@@ -30,6 +30,7 @@
     <color name="unscored">@*android:color/background_floating_device_default_dark</color>
     <color name="primaryBackgroundColor">@*android:color/background_floating_device_default_dark</color>
     <color name="selectedItem">@*android:color/background_floating_device_default_dark</color>
+    <color name="menu_selectedItem">#1FFFFFFF</color>
     <!--
     <color name="translucentStatusBarColor">#50000000</color>
     -->
