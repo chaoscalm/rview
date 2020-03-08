@@ -14,7 +14,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
  -->
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <style name="AppThemeBase" parent="Theme.AppCompat.NoActionBar">
         <item name="colorPrimary">@*android:color/accent_device_default_dark</item>
         <item name="colorPrimaryDark">@*android:color/accent_device_default_dark</item>
@@ -30,6 +30,9 @@
         <item name="android:textColorSecondaryInverse">#b3ffffff</item>
         <!-- Account name in nav drawer -->
         <item name="android:textColorTertiaryInverse">#b3ffffff</item>
+        <item name="android:navigationBarColor" tools:targetApi="lollipop">@android:color/transparent</item>
+        <item name="android:windowTranslucentNavigation" tools:targetApi="kitkat">true</item>
+        <item name="android:colorBackground">@*android:color/background_floating_device_default_dark</item>
     </style>
     <style name="SearchView">
         <item name="floatingSearch_suggestionRightIconColor">@*android:color/accent_device_default_dark</item>
