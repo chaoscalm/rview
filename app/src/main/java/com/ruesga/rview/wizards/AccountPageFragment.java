@@ -576,7 +576,7 @@ public class AccountPageFragment extends WizardPageFragment {
         }
 
         //noinspection ConstantConditions
-        AlertDialog dialog = new AlertDialog.Builder(getContext())
+        AlertDialog dialog = new AlertDialog.Builder(getContext(), R.style.DialogTheme)
                 .setTitle(R.string.menu_help)
                 .setMessage(R.string.account_wizard_account_page_help)
                 .setPositiveButton(R.string.action_close, null)

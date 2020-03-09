@@ -51,7 +51,7 @@
                     android:layout_height="16dp"
                     android:layout_gravity="center"
                     app:srcCompat="@drawable/ic_filter"
-                    app:bindImageTintAttr="@{android.R.attr.textColorSecondary}"
+                    app:bindImageTintAttr="@{android.R.attr.colorAccent}"
                     android:background="?attr/selectableItemBackgroundBorderless"
                     tools:ignore="ContentDescription"/>
 

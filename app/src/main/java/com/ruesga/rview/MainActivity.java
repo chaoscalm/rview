@@ -20,6 +20,8 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
+import android.content.res.ColorStateList;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -722,9 +724,14 @@ public class MainActivity extends ChangeListBaseActivity implements Reloadable {
                     + DrawerNavigationView.SEPARATOR
                     + "false";
             MenuItem item = otherAccountsSubMenu.add(group.getGroupId(), id, Menu.NONE, title);
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                item.setIconTintList(ContextCompat.getColorStateList(
+                        MainActivity.this,
+                        R.color.accent));
+            }
 
             RviewImageHelper.bindAvatar(this, account, account.mAccount, item,
-                    RviewImageHelper.getDefaultAvatar(this, R.color.primaryDarkForeground));
+                    RviewImageHelper.getDefaultAvatar(this, R.color.accent));
             i++;
         }
 
