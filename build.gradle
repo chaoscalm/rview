@@ -103,13 +103,11 @@ subprojects {
 
         if (project.plugins.hasPlugin('android') || project.plugins.hasPlugin('android-library')) {
             android {
-                compileSdkVersion 29
-                // https://developer.android.com/studio/releases/build-tools.html
-                buildToolsVersion '29.0.3'
+                compileSdkVersion 32
 
                 defaultConfig {
                     minSdkVersion 16
-                    targetSdkVersion 29
+                    targetSdkVersion 32
 
                     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
                 }

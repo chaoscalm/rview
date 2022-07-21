@@ -46,7 +46,8 @@
 
         <activity
             android:name="com.ruesga.rview.MainActivity"
-            android:theme="@style/AppTheme.NoStatusBarColor">
+            android:theme="@style/AppTheme.NoStatusBarColor"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -62,7 +63,8 @@
         <activity-alias
             android:name=".InternalUrlHandlerActivity"
             android:theme="@style/AppTheme.NoStatusBarColor"
-            android:targetActivity="com.ruesga.rview.ChangeDetailsActivity">
+            android:targetActivity="com.ruesga.rview.ChangeDetailsActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -84,7 +86,8 @@
             android:targetActivity="com.ruesga.rview.UrlHandlerProxyActivity"
             android:excludeFromRecents="true"
             android:taskAffinity=""
-            android:enabled="true">
+            android:enabled="true"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -117,7 +120,7 @@
             android:name="com.ruesga.rview.EditorActivity"
             android:parentActivityName="com.ruesga.rview.ChangeDetailsActivity"
             android:windowSoftInputMode="adjustResize"
-            android:exported="true">
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
             </intent-filter>
@@ -165,7 +168,8 @@
 
         <receiver
             android:name="com.ruesga.rview.receivers.NotificationReceiver"
-            android:permission="${applicationId}.permissions.PRIVATE_ACCESS">
+            android:permission="${applicationId}.permissions.PRIVATE_ACCESS"
+            android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.LOCALE_CHANGED" />
                 <action android:name="${applicationId}.action.NOTIFICATION_DISMISSED" />
@@ -175,7 +179,8 @@
 
         <receiver
             android:name="com.ruesga.rview.receivers.CacheCleanerReceiver"
-            android:permission="${applicationId}.permissions.PRIVATE_ACCESS">
+            android:permission="${applicationId}.permissions.PRIVATE_ACCESS"
+            android:exported="false">
             <intent-filter>
                 <action android:name="${applicationId}.action.CLEAN_CACHE" />
             </intent-filter>

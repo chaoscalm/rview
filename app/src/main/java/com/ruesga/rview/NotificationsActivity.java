@@ -30,6 +30,7 @@ import com.ruesga.rview.preferences.Constants;
 import com.ruesga.rview.providers.NotificationEntity;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
@@ -85,7 +86,7 @@ public class NotificationsActivity extends AppCompatDelegateActivity {
     }
 
     protected void setupToolbar() {
-        setSupportActionBar(mBinding.toolbar);
+        setSupportActionBar((Toolbar) mBinding.toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);

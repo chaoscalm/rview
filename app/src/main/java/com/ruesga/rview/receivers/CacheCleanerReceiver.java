@@ -91,7 +91,7 @@ public class CacheCleanerReceiver extends BroadcastReceiver {
         Intent i = new Intent(context, CacheCleanerReceiver.class);
         i.setAction(CacheCleanerReceiver.ACTION_CLEAN_CACHE);
         PendingIntent pi = PendingIntent.getBroadcast(
-                context, 1000, i, PendingIntent.FLAG_UPDATE_CURRENT);
+                context, 1000, i, PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
         AlarmManager am = (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
         am.set(AlarmManager.RTC_WAKEUP, due, pi);
