@@ -15,11 +15,12 @@
      limitations under the License.
  -->
 <resources>
-    <style name="AppThemeBase" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <style name="AppThemeBase" parent="Theme.Material3.Light.NoActionBar">
         <item name="colorPrimary">@color/primary</item>
         <item name="colorPrimaryDark">@color/primaryDark</item>
         <item name="colorAccent">@color/accent</item>
         <item name="android:windowNoTitle">true</item>
+        <item name="switchStyle">@style/App.Switches</item>
     </style>
     <style name="AppTheme" parent="AppThemeBase" />
 
@@ -86,4 +87,8 @@
         <item name="floatingSearch_searchSuggestionTextSize">10sp</item>
     </style>
 
+    <style name="App.Switches" parent="Widget.Material3.CompoundButton.Switch">
+        <item name="track">@drawable/switch_track</item>
+        <item name="android:thumb">@drawable/switch_thumb</item>
+    </style>
 </resources>

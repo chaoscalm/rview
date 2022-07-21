@@ -43,19 +43,19 @@
             android:defaultValue="name"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_animated_avatars"
             android:title="@string/account_settings_animated_avatars"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_display_statuses"
             android:title="@string/account_settings_display_account_statuses"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_highlight_unreviewed"
             android:title="@string/account_settings_highlight_unreviewed"
             android:defaultValue="true"
@@ -66,7 +66,7 @@
         android:key="account_dashboard_category"
         android:title="@string/account_settings_dashboard_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_dashboard_outgoing_sort"
             android:title="@string/account_settings_dashboard_outgoing_sort"
             android:summaryOn="@string/account_settings_dashboard_outgoing_sort_on"
@@ -79,7 +79,7 @@
         android:key="account_messages_category"
         android:title="@string/account_settings_messages_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_messages_folded"
             android:title="@string/account_settings_messages_folded"
             android:defaultValue="false"
@@ -94,13 +94,13 @@
             android:defaultValue="2"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_inline_comment_in_messages"
             android:title="@string/account_settings_inline_comment_in_messages"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_toggle_tagged_messages"
             android:title="@string/account_settings_toggle_tagged_messages_title"
             android:summaryOn="@string/account_settings_toggle_tagged_messages_summary_on"
@@ -108,7 +108,7 @@
             android:defaultValue="false"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_toggle_ci_messages"
             android:title="@string/account_settings_toggle_ci_messages_title"
             android:summaryOn="@string/account_settings_toggle_ci_messages_summary_on"
@@ -121,7 +121,7 @@
         android:key="account_files_category"
         android:title="@string/account_settings_files_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_short_filenames"
             android:title="@string/account_settings_account_short_filenames"
             android:summaryOn="@string/account_settings_account_short_filenames_on"
@@ -134,7 +134,7 @@
         android:key="account_attachments_category"
         android:title="@string/account_settings_attachments_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_attachments_image_optimizations"
             android:title="@string/account_settings_attachments_optimize"
             android:defaultValue="false"
@@ -164,7 +164,7 @@
         android:key="account_ci_category"
         android:title="@string/account_settings_ci_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_ci_show"
             android:title="@string/account_settings_ci_category_show"
             android:defaultValue="true"
@@ -190,7 +190,7 @@
             android:summary="@string/account_settings_notifications_advise"
             app:iconSpaceReserved="false"/>
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_notifications"
             android:title="@string/account_settings_notifications_title"
             android:defaultValue="false"
@@ -213,13 +213,13 @@
         android:key="account_external_category"
         android:title="@string/account_settings_external_category">
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_handle_links"
             android:title="@string/account_settings_handle_links"
             android:defaultValue="true"
             app:iconSpaceReserved="false" />
 
-        <SwitchPreference
+        <androidx.preference.SwitchPreferenceCompat
             android:key="account_use_custom_tabs"
             android:title="@string/account_settings_use_custom_tabs"
             android:defaultValue="true"

@@ -135,7 +135,7 @@
             <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="5dp"
                 android:checked="@={model.isPrivate}"
                 app:bindToFeature="@{Features.CHANGE_FLAGS}"
                 app:bindToBoolean="@{Boolean.TRUE}"
@@ -144,7 +144,6 @@
             <androidx.appcompat.widget.SwitchCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
                 android:checked="@={model.isWorkInProgress}"
                 app:bindToFeature="@{Features.CHANGE_FLAGS}"
                 app:bindToBoolean="@{Boolean.TRUE}"
