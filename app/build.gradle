@@ -51,6 +51,7 @@ dependencies {
     // NOTE: Required for libraries generating old source (Glide, ...). Remove when no were required anymore
     implementation 'com.android.support:support-annotations:28.0.0'
     annotationProcessor 'com.android.support:support-annotations:28.0.0'
+    implementation 'com.google.android.material:material:1.6.1'
 }
 
 android {
