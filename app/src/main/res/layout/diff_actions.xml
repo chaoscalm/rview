@@ -45,7 +45,6 @@
             android:text="@string/change_action_comment"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:visibility="@{(safeUnbox(isLeft) ? model.hasLeftCommentAction : model.hasRightCommentAction) ? View.VISIBLE : View.GONE}"
-            android:textColor="?attr/colorAccent"
             app:fontFamilyType="condensed"
             app:allCaps="true"
             android:textSize="12sp"/>
@@ -80,7 +79,6 @@
             android:text="@string/change_action_download"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:visibility="@{(safeUnbox(isLeft) ? model.hasLeftDownloadAction : model.hasRightDownloadAction) ? View.VISIBLE : View.GONE}"
-            android:textColor="?attr/colorAccent"
             app:fontFamilyType="condensed"
             app:allCaps="true"
             android:textSize="12sp"/>
@@ -97,7 +95,6 @@
             android:text="@string/change_action_view"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:visibility="@{(safeUnbox(isLeft) ? model.hasLeftDownloadAction : model.hasRightDownloadAction) ? View.VISIBLE : View.GONE}"
-            android:textColor="?attr/colorAccent"
             app:fontFamilyType="condensed"
             app:allCaps="true"
             android:textSize="12sp"/>

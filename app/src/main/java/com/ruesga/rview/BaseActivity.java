@@ -59,6 +59,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.StringRes;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
@@ -186,7 +187,7 @@ public abstract class BaseActivity extends AppCompatDelegateActivity implements 
             ViewCompat.setElevation(v, 0);
         }
 
-        setSupportActionBar(getContentBinding().toolbar);
+        setSupportActionBar((Toolbar) getContentBinding().toolbar);
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeButtonEnabled(true);
@@ -243,13 +244,13 @@ public abstract class BaseActivity extends AppCompatDelegateActivity implements 
             mModel.hasMiniDrawer = true;
 
             ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
-                    this, getDrawerLayout(), getContentBinding().toolbar, 0, 0);
+                    this, getDrawerLayout(), (Toolbar) getContentBinding().toolbar, 0, 0);
             getDrawerLayout().addDrawerListener(drawerToggle);
             getContentBinding().drawerLayout.setDrawerLockMode(
                     DrawerLayout.LOCK_MODE_LOCKED_CLOSED,
                     GravityCompat.START);
             drawerToggle.syncState();
-            getContentBinding().toolbar.setNavigationOnClickListener(view -> {
+            ((Toolbar) getContentBinding().toolbar).setNavigationOnClickListener(view -> {
                 if (mMiniDrawerLayout.isOpen()) {
                     mMiniDrawerLayout.closePane();
                 } else {
@@ -273,7 +274,7 @@ public abstract class BaseActivity extends AppCompatDelegateActivity implements 
     private void configureFullDrawer() {
         if (getDrawerLayout() != null) {
             ActionBarDrawerToggle drawerToggle = new ActionBarDrawerToggle(
-                    this, getDrawerLayout(), getContentBinding().toolbar, 0, 0);
+                    this, getDrawerLayout(), (Toolbar) getContentBinding().toolbar, 0, 0);
             getDrawerLayout().addDrawerListener(drawerToggle);
             getDrawerLayout().setDrawerLockMode(
                     DrawerLayout.LOCK_MODE_UNLOCKED,

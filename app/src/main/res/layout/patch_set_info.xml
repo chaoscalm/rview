@@ -201,10 +201,13 @@
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textColor="?android:attr/textColorPrimary"
                     android:textSize="12sp" />
-                <include layout="@layout/commit_item"
-                    app:revision="@{revision}"
+
+                <include
+                    layout="@layout/commit_item"
+                    android:layout_width="277dp"
                     app:commit="@{model.commit}"
-                    app:handlers="@{handlers}"/>
+                    app:handlers="@{handlers}"
+                    app:revision="@{revision}" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -331,7 +334,6 @@
                     android:onClick="@{handlers::onRelatedChangesPressed}"
                     android:text="@string/change_details_related_changes"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?attr/colorAccent"
                     app:fontFamilyType="condensed"
                     app:allCaps="true"
                     android:textSize="12sp"/>
@@ -348,7 +350,6 @@
                     android:text="@string/change_details_included_in"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:visibility="@{change.status.equals(ChangeStatus.MERGED) ? View.VISIBLE : View.GONE}"
-                    android:textColor="?attr/colorAccent"
                     app:fontFamilyType="condensed"
                     app:allCaps="true"
                     android:textSize="12sp"
@@ -365,8 +366,6 @@
                     android:onClick="@{handlers::onDownloadPatchSetPressed}"
                     android:text="@string/change_details_download_patchset"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-
-                    android:textColor="?attr/colorAccent"
                     app:fontFamilyType="condensed"
                     app:allCaps="true"
                     android:textSize="12sp"
@@ -383,7 +382,6 @@
                     android:onClick="@{handlers::onViewPatchSetPressed}"
                     android:text="@string/change_details_view_patchset"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?attr/colorAccent"
                     app:fontFamilyType="condensed"
                     app:allCaps="true"
                     android:textSize="12sp"
@@ -400,7 +398,6 @@
                     android:onClick="@{handlers::onEditMessagePressed}"
                     android:text="@string/change_details_edit_message"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="@color/primaryDarkForeground"
                     android:visibility="@{(safeUnbox(isAuthenticated) &amp;&amp; safeUnbox(isCurrentRevision) &amp;&amp; (change.status.equals(ChangeStatus.NEW) || change.status.equals(ChangeStatus.DRAFT))) ? View.VISIBLE : View.GONE}"
                     app:fontFamilyType="boldCondensed"
                     app:allCaps="true"

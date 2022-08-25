@@ -48,7 +48,6 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="3dp"
                 app:srcCompat="@drawable/ic_robot_details"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:tag='@{safeUnbox(model instanceof RobotCommentInfo) ? ((RobotCommentInfo)model).url : null}'
                 android:onClick="@{handlers::onRobotDetailPressed}"
@@ -67,7 +66,6 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="3dp"
                 app:srcCompat="@drawable/ic_reply"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.GONE : View.VISIBLE}"
                 android:tag='@{model.patchSet + "/" + model.id + "/" + model.line}'
@@ -80,7 +78,6 @@
                 android:layout_marginStart="3dp"
                 android:layout_marginEnd="3dp"
                 app:srcCompat="@drawable/ic_quote"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.GONE : View.VISIBLE}"
                 android:tag='@{model.patchSet + "/" + model.id + "/" + model.line}'
@@ -95,7 +92,6 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 app:srcCompat="@drawable/ic_done"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.GONE : View.VISIBLE}"
                 android:tag='@{model.patchSet + "/" + model.id + "/" + model.line}'
@@ -110,7 +106,6 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 app:srcCompat="@drawable/ic_thumb_up"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.GONE : View.VISIBLE}"
                 android:tag='@{model.patchSet + "/" + model.id + "/" + model.line}'
@@ -125,7 +120,6 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 app:srcCompat="@drawable/ic_edit"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.VISIBLE : View.GONE}"
                 android:tag='@{model.patchSet + "/" + model.id + "/" + safeUnbox(model.unresolved) + "/" + (model.inReplyTo == null ? "" : model.inReplyTo) + "/" + model.line}'
@@ -140,7 +134,6 @@
                 android:layout_marginLeft="3dp"
                 android:layout_marginRight="3dp"
                 app:srcCompat="@drawable/ic_delete"
-                android:tint="?attr/colorAccent"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{safeUnbox(isDraft) ? View.VISIBLE : View.GONE}"
                 android:onClick="@{handlers::onDeletePressed}"

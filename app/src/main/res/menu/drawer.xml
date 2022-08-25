@@ -89,8 +89,7 @@
         android:id="@+id/category_my_filters"
         android:checkableBehavior="all">
         <item android:title="@string/menu_my_filters_category">
-            <menu
-                >
+            <menu>
                 <!-- Custom filters goes here -->
             </menu>
         </item>

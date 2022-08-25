@@ -33,7 +33,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/selector_item">
+        android:background="?android:colorBackground">
         <LinearLayout
             android:id="@+id/item"
             android:layout_width="match_parent"
@@ -275,7 +275,6 @@
                         android:text="@string/change_merge_conflict"
                         android:textAppearance="?android:attr/textAppearanceSmall"
                         android:textStyle="bold"
-                        android:textColor="?attr/colorAccent"
                         android:maxLines="1"
                         android:ellipsize="end"
                         app:allCaps="true"

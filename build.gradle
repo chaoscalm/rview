@@ -16,18 +16,18 @@
 
 ext {
     libraries = [
-        androidx_appcompat          : '1.1.0',
-        androidx_browser            : '1.2.0',
+        androidx_appcompat          : '1.4.2',
+        androidx_browser            : '1.4.0',
         androidx_cardview           : '1.0.0',
-        androidx_exifinterface      : '1.2.0',
+        androidx_exifinterface      : '1.3.3',
         androidx_legacy             : '1.0.0',
         material                    : '1.6.1',
         play_services_auth          : '18.0.0',
         firebase_core               : '17.4.1',
         firebase_messaging          : '20.1.7',
         firebase_crashlytics        : '17.0.0',
-        gson                        : '2.8.6',
-        retrofit2                   : '2.8.1',
+        gson                        : '2.9.0',
+        retrofit2                   : '2.9.0',
         // Keep okHttp in 3.12.x, since 3.13+ requires Android 5
         okhttp3                     : '3.12.10',
         okio                        : '2.5.0',
@@ -36,18 +36,17 @@ ext {
         rxandroid                   : '2.1.1',
         rxloader2                   : 'edeebf0a1a',
         // Keep commons-io in 2.5. Prior android versions doesn't have fully support for Files api.
-        commons_io                  : '2.5',
-        antlrv3                     : '3.5.2',
+        commons_io                  : '2.11.0',
+        antlrv3                     : '3.5.3',
         smoothprogressbar           : '1.1.0',
         glide                       : '4.11.0',
-        prettytime                  : '4.0.5.Final',
-        flexboxlayout               : '2.0.1',
+        prettytime                  : '5.0.3.Final',
+        flexboxlayout               : '3.0.0',
         floatingsearchview          : '2d435bead5',
-        androidsvg                  : '3511e13649',
+        androidsvg                  : '1.4',
         keyboardvisibilityevent     : '2.3.0',
         better_link_movement_method : '2.2.0',
-        aboutlibraries              : '8.1.2',
-        aboutlibraries_definitions  : '8.1.0'
+        aboutlibraries              : '8.9.4'
     ]
 
     testLibraries = [
@@ -103,11 +102,11 @@ subprojects {
 
         if (project.plugins.hasPlugin('android') || project.plugins.hasPlugin('android-library')) {
             android {
-                compileSdkVersion 32
+                compileSdk 32
 
                 defaultConfig {
-                    minSdkVersion 16
-                    targetSdkVersion 32
+                    minSdk 21
+                    targetSdk 32
 
                     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
                 }

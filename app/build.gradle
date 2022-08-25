@@ -38,19 +38,18 @@ dependencies {
     annotationProcessor "com.github.bumptech.glide:compiler:${libraries.glide}"
     implementation "com.github.bumptech.glide:okhttp3-integration:${libraries.glide}"
     implementation "org.ocpsoft.prettytime:prettytime:${libraries.prettytime}"
-    implementation "com.google.android:flexbox:${libraries.flexboxlayout}"
+    implementation "com.google.android.flexbox:flexbox:${libraries.flexboxlayout}"
     implementation "com.github.jruesga:floatingsearchview:${libraries.floatingsearchview}"
-    implementation ("com.github.BigBadaboom:androidsvg:${libraries.androidsvg}") {
+    implementation ("com.caverock:androidsvg-aar:${libraries.androidsvg}") {
         exclude group: 'org.jetbrains', module: 'annotations-java5'
     }
     implementation "net.yslibrary.keyboardvisibilityevent:keyboardvisibilityevent:${libraries.keyboardvisibilityevent}"
     implementation ("com.mikepenz:aboutlibraries:${libraries.aboutlibraries}@aar") { transitive = true }
-    implementation "com.mikepenz:aboutlibraries-definitions:${libraries.aboutlibraries_definitions}"
     implementation "me.saket:better-link-movement-method:${libraries.better_link_movement_method}"
 
     // NOTE: Required for libraries generating old source (Glide, ...). Remove when no were required anymore
-    implementation 'com.android.support:support-annotations:28.0.0'
-    annotationProcessor 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.annotation:annotation:1.4.0'
+    annotationProcessor 'androidx.annotation:annotation:1.4.0'
     implementation 'com.google.android.material:material:1.6.1'
 }
 
@@ -177,8 +176,8 @@ def addActivityAliases(manifest) {
             "    android:targetActivity=\"com.ruesga.rview.UrlHandlerProxyActivity\"\n" +
             "    android:excludeFromRecents=\"true\"\n" +
             "    android:taskAffinity=\"\"\n" +
-            "    android:enabled=\"false\"\n" +
-            "    android:exported=\"false\">\n" +
+            "    android:enabled=\"true\"\n" +
+            "    android:exported=\"true\">\n" +
             "    <intent-filter>\n" +
             "        <action android:name=\"android.intent.action.VIEW\" />\n" +
             "        <category android:name=\"android.intent.category.DEFAULT\" />\n" +

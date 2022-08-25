@@ -743,4 +743,6 @@
     <string name="dashboard_default">Default</string>
     <string name="dashboard_inherit_from">(inherit from <xliff:g id="project">%1$s</xliff:g>)</string>
     <string name="dashboard_chooser_up">Return back to filter</string>
+    <string name="link_not_openable">Link could not be opened</string>
+
 </resources>

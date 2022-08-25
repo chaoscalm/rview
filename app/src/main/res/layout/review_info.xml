@@ -102,19 +102,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         app:srcCompat="@drawable/ic_send"
-                        android:tint="?attr/colorAccent"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:onClick="@{handlers::onReviewPressed}"
                         android:scaleType="centerInside"
                         android:enabled="@{!safeUnbox(isLocked)}"
                         android:visibility="@{!safeUnbox(isProcessing) ? View.VISIBLE : View.GONE}"
                         tools:ignore="ContentDescription"/>
+
                     <ProgressBar
-                        android:layout_width="match_parent"
+                        android:layout_width="51dp"
                         android:layout_height="match_parent"
-                        android:padding="8dp"
                         android:layout_gravity="center"
-                        android:visibility="@{safeUnbox(isProcessing) ? View.VISIBLE : View.GONE}"/>
+                        android:padding="8dp"
+                        android:visibility="@{safeUnbox(isProcessing) ? View.VISIBLE : View.GONE}" />
                 </FrameLayout>
             </LinearLayout>
 

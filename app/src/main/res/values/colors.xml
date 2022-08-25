@@ -15,10 +15,10 @@
      limitations under the License.
  -->
 <resources>
-    <color name="primary">#05668d</color>
-    <color name="primaryDark">#044c69</color>
+    <color name="primary">@color/material_dynamic_primary50</color>
+    <color name="primaryDark">@color/material_dynamic_primary20</color>
     <color name="primaryDarkForeground">@color/primaryDark</color>
-    <color name="accent">#8d2205</color>
+    <color name="accent">@color/material_dynamic_secondary60</color>
     <color name="alert">#ceab56</color>
     <color name="overlay">#90000000</color>
     <color name="secondaryIconColor">#757575</color>
@@ -29,6 +29,9 @@
     <color name="primaryBackgroundColor">#e0e0e0</color>
     <color name="selectedItem">#e3e8f7</color>
     <color name="translucentStatusBarColor">@android:color/transparent</color>
+    <color name="white">#e3e8f7</color>
+    <color name="cPrimary">@color/material_dynamic_primary50</color>
+    <color name="cPrimaryComments">@color/material_dynamic_primary20</color>
 
     <color name="success">#c88bc34a</color>
     <color name="failure">#c8ed7067</color>
@@ -39,21 +42,21 @@
     <color name="messageWithNegativeReview">#bee2cccc</color>
 
     <color name="diffLineBackgroundColor">#f5f5f5</color>
-    <color name="diffAddedBackgroundColor">#cce2cd</color>
+    <color name="diffAddedBackgroundColor">#228b22</color>
     <color name="diffAddedDueRebaseBackgroundColor">#eefeff</color>
-    <color name="diffDeletedBackgroundColor">#e2cccc</color>
+    <color name="diffDeletedBackgroundColor">#ff6347</color>
     <color name="diffDeletedDueRebaseBackgroundColor">#fff6ea</color>
-    <color name="diffAddedForegroundColor">#81c784</color>
+    <color name="diffAddedForegroundColor">#32cd32</color>
     <color name="diffAddedDueRebaseForegroundColor">#a47ddfdf</color>
-    <color name="diffDeletedForegroundColor">#e48787</color>
+    <color name="diffDeletedForegroundColor">#ff0000</color>
     <color name="diffDeletedDueRebaseForegroundColor">#a4cc8d4e</color>
-    <color name="diffSkipBackgroundColor">#ddeeff</color>
-    <color name="diffNoDiffBackgroundColor">#ef9a9a</color>
-    <color name="diffCommentBackgroundColor">#fffecc</color>
+    <color name="diffSkipBackgroundColor">@color/material_dynamic_secondary60</color>
+    <color name="diffNoDiffBackgroundColor">#ff0000</color>
+    <color name="diffCommentBackgroundColor">@color/material_dynamic_tertiary50</color>
     <color name="diffHighlightColor">#d32f2f</color>
 
     <color name="stats_open">#90caf9</color>
-    <color name="stats_merged">#aed581</color>
+    <color name="stats_merged">#228b22</color>
     <color name="stats_abandoned">#a1887f</color>
     <color name="stats_line_text">@android:color/black</color>
 

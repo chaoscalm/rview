@@ -93,7 +93,6 @@
                     android:background="?attr/selectableItemBackgroundBorderless"
                     app:srcCompat="@drawable/ic_share"
                     android:onClick="@{handlers::onSharePressed}"
-                    android:tint="?attr/colorAccent"
                     tools:ignore="ContentDescription" />
             </LinearLayout>
 
@@ -263,7 +262,6 @@
                             android:background="?attr/selectableItemBackground"
                             android:text="@string/change_details_add_reviewer"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="?attr/colorAccent"
                             android:textStyle="bold"
                             app:allCaps="true"
                             android:textSize="12sp"/>
@@ -276,7 +274,6 @@
                             android:background="?attr/selectableItemBackground"
                             android:text="@string/change_details_add_me_as_reviewer"
                             android:textAppearance="?android:attr/textAppearanceSmall"
-                            android:textColor="?attr/colorAccent"
                             android:textStyle="bold"
                             app:allCaps="true"
                             android:textSize="12sp"/>
@@ -296,7 +293,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/change_details_cc"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="12sp" />
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -325,7 +321,6 @@
                         android:background="?attr/selectableItemBackground"
                         android:text="@string/change_details_add_cc"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="?attr/colorAccent"
                         android:textStyle="bold"
                         app:allCaps="true"
                         android:textSize="12sp"/>
@@ -341,7 +336,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/change_details_project"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?android:attr/textColorPrimary"
                     android:textSize="12sp" />
                 <com.ruesga.rview.widget.StyleableTextView
                     android:id="@+id/project"
@@ -351,7 +345,6 @@
                     android:layout_marginLeft="5dp"
                     android:text="@{model.project}"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?attr/colorAccent"
                     android:onClick="@{handlers::onApplyFilterPressed}"
                     android:background="?attr/selectableItemBackground"
                     android:textSize="12sp" />
@@ -378,7 +371,6 @@
                     android:layout_marginLeft="5dp"
                     android:text="@{model.branch}"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?attr/colorAccent"
                     android:onClick="@{handlers::onApplyFilterPressed}"
                     android:background="?attr/selectableItemBackground"
                     android:textSize="12sp" />
@@ -420,7 +412,6 @@
                     android:text="@{model.topic}"
                     android:visibility="@{model.topic == null || model.topic.isEmpty() ? View.GONE : View.VISIBLE}"
                     android:textAppearance="?android:attr/textAppearanceSmall"
-                    android:textColor="?attr/colorAccent"
                     android:onClick="@{handlers::onApplyFilterPressed}"
                     android:background="?attr/selectableItemBackground"
                     android:textSize="12sp" />
@@ -580,7 +571,6 @@
                     android:text="@string/change_merge_conflict"
                     android:textAppearance="?android:attr/textAppearanceSmall"
                     android:textStyle="bold"
-                    android:textColor="?attr/colorAccent"
                     android:maxLines="1"
                     android:ellipsize="end"
                     app:allCaps="true"

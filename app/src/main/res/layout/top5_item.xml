@@ -28,7 +28,7 @@
         android:layout_height="36dp"
         android:minHeight="?attr/listPreferredItemHeightSmall"
         android:gravity="center_vertical"
-        android:background="@{safeUnbox(even) ? @color/selectedItem : @android:color/transparent}"
+        android:background="@{safeUnbox(even) ? @color/cPrimary : @android:color/transparent}"
         android:onClick="@{handlers::onItemPressed}"
         android:tag="@{model.tag}"
         android:orientation="horizontal">
@@ -51,7 +51,7 @@
             android:layout_marginLeft="8dp"
             android:text="@{model.item}"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?android:attr/textColorSecondary"
+            android:textColor="?android:attr/textColorPrimary"
             android:maxLines="1"
             android:ellipsize="end"
             android:textSize="12sp" />

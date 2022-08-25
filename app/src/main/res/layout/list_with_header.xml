@@ -153,7 +153,6 @@
                         android:tag='@{id + "-action1"}'
                         android:onClick="@{handlers::onListHeaderActionPressed}"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="?attr/colorAccent"
                         app:fontFamilyType="condensed"
                         app:allCaps="true"
                         android:textSize="12sp"/>
@@ -169,7 +168,6 @@
                         android:tag='@{id + "-action2"}'
                         android:onClick="@{handlers::onListHeaderActionPressed}"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="?attr/colorAccent"
                         app:fontFamilyType="condensed"
                         app:allCaps="true"
                         android:textSize="12sp"/>
@@ -185,7 +183,6 @@
                         android:tag='@{id + "-action3"}'
                         android:onClick="@{handlers::onListHeaderActionPressed}"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="?attr/colorAccent"
                         app:fontFamilyType="condensed"
                         app:allCaps="true"
                         android:textSize="12sp"/>
@@ -201,7 +198,6 @@
                         android:tag='@{id + "-action4"}'
                         android:onClick="@{handlers::onListHeaderActionPressed}"
                         android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="?attr/colorAccent"
                         app:fontFamilyType="condensed"
                         app:allCaps="true"
                         android:textSize="12sp"/>

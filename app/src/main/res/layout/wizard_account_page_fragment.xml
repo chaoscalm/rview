@@ -50,7 +50,7 @@
                     android:layout_height="wrap_content"
                     android:text="@{model.message}"
                     android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                    android:textColor="@color/wizard_text_secondary"/>
+                    android:textColor="?android:attr/textColorPrimary"/>
                 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -72,7 +72,7 @@
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
                             android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-                            android:textColor="@color/wizard_text_secondary"
+                            android:textColor="?android:attr/textColorPrimary"
                             android:text="@string/account_wizard_account_page_authenticated_access"/>
 
                         <androidx.appcompat.widget.SwitchCompat

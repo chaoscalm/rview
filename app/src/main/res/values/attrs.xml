@@ -27,6 +27,7 @@
             <enum name="boldMonospace" value="7"/>
         </attr>
         <attr name="allCaps" format="boolean"/>
+        <attr name="needsLinkHandling" format="boolean" />
     </declare-styleable>
     <declare-styleable name="ScoreLabelsView">
         <attr name="shortLabels" format="boolean"/>

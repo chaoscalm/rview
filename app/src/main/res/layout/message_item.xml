@@ -132,7 +132,6 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@id/timestamp"
             app:srcCompat="@drawable/ic_reply"
-            android:tint="?attr/colorAccent"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:onClick="@{handlers::onReplyCommentPressed}"
             android:visibility="@{!safeUnbox(folded) &amp;&amp; safeUnbox(isAuthenticated) &amp;&amp; TextUtils.isEmpty(model.tag) ? View.VISIBLE : View.GONE}"

@@ -147,7 +147,7 @@
                 android:checked="@={model.isWorkInProgress}"
                 app:bindToFeature="@{Features.CHANGE_FLAGS}"
                 app:bindToBoolean="@{Boolean.TRUE}"
-                android:text="@string/create_new_change_is_wip" />
+                android:text="@string/create_new_change_is_wip"/>
         </LinearLayout>
     </ScrollView>
 </layout>

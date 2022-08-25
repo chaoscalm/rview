@@ -36,23 +36,23 @@
 
         <com.ruesga.rview.widget.FixedSizeImageView
             android:id="@+id/avatar"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            app:srcCompat="@drawable/ic_account_circle"
-            android:contentDescription="@null"/>
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:contentDescription="@null"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            app:srcCompat="@drawable/ic_account_circle"/>
 
         <com.ruesga.rview.widget.StyleableTextView
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:paddingLeft="5dp"
-            android:paddingStart="5dp"
-            android:paddingRight="8dp"
+            android:paddingStart="1dp"
             android:paddingEnd="8dp"
-            android:paddingTop="2dp"
-            android:paddingBottom="2dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:textAppearance="?android:attr/textAppearanceSmallInverse"
-            android:textColor="?android:attr/textColorPrimary"
+            android:textColor="?android:textColorPrimary"
             android:textStyle="bold"
             android:textSize="12sp"
             android:singleLine="true"

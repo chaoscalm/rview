@@ -236,7 +236,6 @@ public class MainActivity extends ChangeListBaseActivity implements Reloadable {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         mUiHandler = new Handler(mMessenger);
         mIsTwoPane = getResources().getBoolean(R.bool.config_is_two_pane);
-
         super.onCreate(savedInstanceState);
 
         if (getIntent() != null) {

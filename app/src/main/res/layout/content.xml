@@ -42,14 +42,12 @@
                 android:elevation="4dp"
                 tools:ignore="UnusedAttribute">
 
-                <androidx.appcompat.widget.Toolbar
+                <com.google.android.material.appbar.MaterialToolbar
                     android:id="@+id/toolbar"
                     android:layout_width="match_parent"
-                    android:layout_height="?attr/actionBarSize"
+                    android:layout_height="wrap_content"
                     android:minHeight="?attr/actionBarSize"
-                    android:background="?attr/colorPrimaryDark"
-                    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-                    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                    android:background="?colorPrimary"
                     app:layout_collapseMode="pin"
                     app:toolbarScrollFlags="@{model.hasTabs}" />
 
@@ -57,14 +55,14 @@
                     android:layout_width="match_parent"
                     android:layout_height="?attr/actionBarSize"
                     android:layout_gravity="bottom"
-                    android:background="?attr/colorPrimaryDark"
+                    android:background="?colorPrimaryDark"
                     android:visibility="@{(model.hasTabs || model.hasPages) ? View.VISIBLE : View.GONE}"
                     app:layout_collapseMode="pin">
                     <com.google.android.material.tabs.TabLayout
                         android:id="@+id/tabs"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="?attr/colorPrimaryDark"
+                        android:background="?colorPrimary"
                         android:visibility="@{model.hasTabs ? View.VISIBLE : View.GONE}"
                         app:tabTextColor="@color/tab_text"
                         app:tabSelectedTextColor="@color/tab_selected_text"
@@ -74,7 +72,8 @@
                         android:id="@+id/pagerController"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:visibility="@{model.hasPages ? View.VISIBLE : View.GONE}" />
+                        android:visibility="@{model.hasPages ? View.VISIBLE : View.GONE}"
+                        />
                 </FrameLayout>
 
             </com.google.android.material.appbar.AppBarLayout>
@@ -108,7 +107,7 @@
                 android:layout_margin="16dp"
                 android:visibility="@{model.hasFab ? View.VISIBLE : View.GONE}"
                 android:onClick="@{handlers::onFabPressed}"
-                app:backgroundTint="?attr/colorPrimaryDark"
+                app:backgroundTint="?colorPrimary"
                 app:layout_behavior="com.ruesga.rview.widget.ScrollAwareFloatingActionButtonBehavior"
                 app:srcCompat="@drawable/ic_add"/>
 

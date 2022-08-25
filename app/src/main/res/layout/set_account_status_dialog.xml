@@ -48,7 +48,6 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     app:srcCompat="@drawable/ic_tag_faces"
-                    android:tint="?attr/colorAccent"
                     android:visibility="@{!safeUnbox(model.isSuggestion) ? View.VISIBLE : View.INVISIBLE}"
                     android:contentDescription="@null"/>
                 <ImageView
@@ -83,7 +82,6 @@
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 app:srcCompat="@drawable/ic_clear_black_24dp"
-                android:tint="?attr/colorAccent"
                 android:visibility="@{!TextUtils.isEmpty(model.description) ? View.VISIBLE : View.INVISIBLE}"
                 android:onClick="@{handlers::onClearPressed}"
                 android:contentDescription="@null"/>

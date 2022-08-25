@@ -31,7 +31,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:minHeight="?attr/actionBarSize"
-            android:background="?attr/colorPrimaryDark"
+            android:background="?attr/colorPrimary"
             android:visibility="invisible"
             android:layout_marginTop="2dp"
             android:layout_marginBottom="2dp" />
@@ -62,6 +62,7 @@
                 android:layout_marginRight="3dp"
                 android:layout_marginEnd="3dp"
                 android:theme="@style/SearchView"
+                android:backgroundTint="?colorPrimary"
                 app:floatingSearch_dimBackground="false"
                 app:floatingSearch_showSearchKey="true"
                 app:floatingSearch_leftActionMode="customIcon"

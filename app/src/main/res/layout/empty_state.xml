@@ -70,10 +70,8 @@
             android:visibility="@{handlers != null &amp;&amp; Formatter.hasEmptyStateRetry(model.state) ? View.VISIBLE : View.GONE}"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:textColor="?attr/colorAccent"
             android:onClick="@{handlers::onRetry}"
             android:textStyle="bold"
-            app:allCaps="true"
             android:textSize="16sp"/>
 
     </FrameLayout>

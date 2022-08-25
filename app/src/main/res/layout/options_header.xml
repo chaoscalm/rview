@@ -23,7 +23,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="@dimen/options_header_height"
-        android:background="?attr/colorPrimaryDark"
+        android:background="?colorPrimary"
         android:elevation="4dp"
         android:paddingTop="@dimen/drawer_header_margin_top"
         tools:ignore="UnusedAttribute">

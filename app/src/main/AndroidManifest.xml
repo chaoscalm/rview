@@ -64,7 +64,8 @@
             android:name=".InternalUrlHandlerActivity"
             android:theme="@style/AppTheme.NoStatusBarColor"
             android:targetActivity="com.ruesga.rview.ChangeDetailsActivity"
-            android:exported="false">
+            android:exported="false"
+            tools:ignore="AppLinkUrlError">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.DEFAULT" />

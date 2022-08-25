@@ -39,10 +39,11 @@
             <com.ruesga.rview.widget.DelayedAutocompleteTextView
                 android:id="@+id/reviewer"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="45dp"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:textColor="?android:attr/textColorSecondary"
                 android:textSize="14sp"
+                android:padding="12dp"
                 android:maxLines="1"
                 android:tag="@{model.reviewer}"
                 android:completionThreshold="2"
