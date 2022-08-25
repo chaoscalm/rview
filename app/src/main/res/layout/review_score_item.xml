@@ -31,25 +31,26 @@
         android:minHeight="36dp"
         android:visibility="@{safeUnbox(permitted) ? View.VISIBLE : View.INVISIBLE}"
         android:gravity="center_vertical">
+
         <com.ruesga.rview.widget.StyleableTextView
             android:id="@+id/score_item"
-            android:layout_width="wrap_content"
+            android:layout_width="20dp"
             android:layout_height="wrap_content"
-            android:layout_marginRight="2dp"
-            android:layout_marginLeft="2dp"
             android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
             android:layout_marginEnd="2dp"
+            android:layout_marginRight="2dp"
             android:background="@drawable/bg_tag"
+            android:paddingStart="8dp"
+            android:paddingLeft="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/white"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
-            android:paddingRight="8dp"
-            android:paddingEnd="8dp"
-            app:score="@{score}"
-            app:fontFamilyType="bold"
             android:textSize="11sp"
-            tools:ignore="SmallSp"/>
+            app:fontFamilyType="bold"
+            app:score="@{score}"
+            tools:ignore="SmallSp" />
     </FrameLayout>
 
 </layout>

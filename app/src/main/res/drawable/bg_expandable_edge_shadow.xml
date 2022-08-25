@@ -15,5 +15,6 @@
      limitations under the License.
  -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <gradient android:angle="90" android:startColor="#FFFFFFFF" android:endColor="#99FFFFFF" />
+    <gradient android:angle="90" android:startColor="@color/material_dynamic_primary60" android:endColor="#00000000" />
+    <corners android:bottomLeftRadius="6dp" android:bottomRightRadius="6dp"/>
 </shape>

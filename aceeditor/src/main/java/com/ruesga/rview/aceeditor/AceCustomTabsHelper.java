@@ -14,6 +14,7 @@
 
 package com.ruesga.rview.aceeditor;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
@@ -65,7 +66,7 @@ class AceCustomTabsHelper {
         }
 
         // Get all apps that can handle VIEW intents.
-        List<ResolveInfo> resolvedActivityList = pm.queryIntentActivities(activityIntent, 0);
+        @SuppressLint("QueryPermissionsNeeded") List<ResolveInfo> resolvedActivityList = pm.queryIntentActivities(activityIntent, 0);
         List<String> packagesSupportingCustomTabs = new ArrayList<>();
         for (ResolveInfo info : resolvedActivityList) {
             Intent serviceIntent = new Intent();

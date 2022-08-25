@@ -585,12 +585,6 @@ class AceWebView extends WebView implements NestedScrollingChild {
         }
 
         @Override
-        public void onReachedMaxAppCacheSize(long requiredStorage, long quota,
-                WebStorage.QuotaUpdater quotaUpdater) {
-            mWrappedWebChromeClient.onReachedMaxAppCacheSize(requiredStorage, quota, quotaUpdater);
-        }
-
-        @Override
         public void onGeolocationPermissionsShowPrompt(String origin,
                 GeolocationPermissions.Callback callback) {
             mWrappedWebChromeClient.onGeolocationPermissionsShowPrompt(origin, callback);
