@@ -68,6 +68,7 @@ import androidx.fragment.app.Fragment;
 public class ActivityHelper {
 
     public static final int LIST_RESULT_CODE = 100;
+    private static final String ACTION_CUSTOM_TABS_CONNECTION = "android.support.customtabs.action.CustomTabsService";
 
     public static void openUriInCustomTabs(Activity activity, String uri) {
         openUriInCustomTabs(activity, Uri.parse(uri), false);
@@ -112,46 +113,39 @@ public class ActivityHelper {
             openUri(activity, uri, excludeRview);
         }
     }
+    public static ArrayList<ResolveInfo> getCustomTabsPackages(Context ctx, ArrayList<ResolveInfo> packagesSupportingCustomTabs) {
+        PackageManager pm = ctx.getPackageManager();
+        // Get default VIEW intent handler.
+        Intent activityIntent = new Intent()
+                .setAction(Intent.ACTION_VIEW)
+                .addCategory(Intent.CATEGORY_BROWSABLE)
+                .setData(Uri.fromParts("http", "", null));
+
+        // Get all apps that can handle VIEW intents.
+        List<ResolveInfo> resolvedActivityList = pm.queryIntentActivities(activityIntent, 0);
+        for (ResolveInfo info : resolvedActivityList) {
+            Intent serviceIntent = new Intent();
+            serviceIntent.setAction(ACTION_CUSTOM_TABS_CONNECTION);
+            serviceIntent.setPackage(info.activityInfo.packageName);
+            // Check if this package also resolves the Custom Tabs service.
+            if (pm.resolveService(serviceIntent, 0) != null) {
+                packagesSupportingCustomTabs.add(info);
+            }
+        }
+        return packagesSupportingCustomTabs;
+    }
 
     @SuppressWarnings("Convert2streamapi")
     public static void openUri(Context ctx, Uri uri, boolean excludeRview) {
         try {
-            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-            intent.putExtra(Constants.EXTRA_FORCE_SINGLE_PANEL, true);
-            intent.putExtra(Constants.EXTRA_SOURCE, ctx.getPackageName());
+            Intent intent = new Intent()
+                    .setAction(Intent.ACTION_VIEW)
+                    .addCategory(Intent.CATEGORY_BROWSABLE)
+                    .setData(Uri.fromParts("http", "", null));
 
             if (excludeRview) {
-                // Use a different url to find all the browsers activities
-                Intent test = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.es"));
-                PackageManager pm = ctx.getPackageManager();
-                List<ResolveInfo> activities = pm.queryIntentActivities(
-                        test, PackageManager.MATCH_DEFAULT_ONLY);
-
-                List<Intent> targetIntents = new ArrayList<>();
-                for (ResolveInfo ri : activities) {
-                    if (!ri.activityInfo.packageName.equals(ctx.getPackageName())) {
-                        Intent i = new Intent(Intent.ACTION_VIEW, uri);
-                        i.setPackage(ri.activityInfo.packageName);
-                        i.putExtra(Constants.EXTRA_SOURCE, ctx.getPackageName());
-                        i.putExtra(Constants.EXTRA_FORCE_SINGLE_PANEL, true);
-                        targetIntents.add(i);
-                    }
-                }
-
-                switch (targetIntents.size()) {
-                    case 0:
-                        throw new ActivityNotFoundException();
-                    case 1:
-                        ctx.startActivity(targetIntents.get(0));
-                        break;
-                    default:
-                        Intent chooserIntent = Intent.createChooser(
-                                intent, ctx.getString(R.string.action_open_with));
-                        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
-                                targetIntents.toArray(new Parcelable[]{}));
-                        ctx.startActivity(chooserIntent);
-                        break;
-                }
+                getCustomTabsPackages(ctx);
+                ctx.startActivity(getCustomTabsPackages(ctx,));
             } else {
                 ctx.startActivity(intent);
             }
@@ -177,50 +171,48 @@ public class ActivityHelper {
             Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
         }
     }
-
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void open(Context ctx, String action, Uri uri, String mimeType) {
-        try {
-            Intent intent = new Intent(Intent.ACTION_VIEW);
-            if (mimeType == null) {
-                intent.setData(uri);
-            } else {
-                intent.setDataAndType(uri, mimeType);
-            }
-            intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
-            } else {
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-            }
-            ctx.startActivity(Intent.createChooser(intent, action));
+                try {
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        if (mimeType == null) {
+                                intent.setData(uri);
+                            } else {
+                                intent.setDataAndType(uri, mimeType);
+                            }
+                        intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+                            } else {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                            }
+                        ctx.startActivity(Intent.createChooser(intent, action));
 
-        } catch (ActivityNotFoundException ex) {
-            String msg = ctx.getString(R.string.exception_cannot_handle_link, uri.toString());
-            Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
-        }
-    }
+                            } catch (ActivityNotFoundException ex) {
+                        String msg = ctx.getString(R.string.exception_cannot_handle_link, uri.toString());
+                        Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
+                   }
+            }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+                @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public static void share(Context ctx, String action, String title, String text) {
-        try {
-            Intent intent = new Intent(Intent.ACTION_SEND);
-            intent.setType("text/plain");
-            intent.putExtra(Intent.EXTRA_SUBJECT, title);
-            intent.putExtra(Intent.EXTRA_TEXT, text);
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
-            } else {
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                try {
+                        Intent intent = new Intent(Intent.ACTION_SEND);
+                        intent.setType("text/plain");
+                        intent.putExtra(Intent.EXTRA_SUBJECT, title);
+                        intent.putExtra(Intent.EXTRA_TEXT, text);
+                        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+                            } else {
+                                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                            }
+                        ctx.startActivity(Intent.createChooser(intent, action));
+
+                            } catch (ActivityNotFoundException ex) {
+                        String msg = ctx.getString(R.string.exception_cannot_share_link);
+                        Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
+                    }
             }
-            ctx.startActivity(Intent.createChooser(intent, action));
-
-        } catch (ActivityNotFoundException ex) {
-            String msg = ctx.getString(R.string.exception_cannot_share_link);
-            Toast.makeText(ctx, msg, Toast.LENGTH_SHORT).show();
-        }
-    }
-
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public static void downloadUri(Context context, Uri uri, String fileName,
             @Nullable String mimeType) throws IOException {
@@ -266,6 +258,23 @@ public class ActivityHelper {
                 dst.getName(), dst.getName(), true, mimeType, dst.getPath(), dst.length(), true);
     }
 
+    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
+    public static void openChangeDetailsByUri(
+            Context context, Uri uri, boolean hasParent, boolean hasForceUp) {
+                Intent intent = new Intent(context, ChangeDetailsActivity.class);
+
+                        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
+                    } else {
+                        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
+                    }
+                intent.putExtra(Constants.EXTRA_FORCE_SINGLE_PANEL, true);
+                intent.putExtra(Constants.EXTRA_HAS_PARENT, hasParent);
+                intent.putExtra(Constants.EXTRA_HAS_FORCE_UP, hasForceUp);
+                intent.setData(uri);
+                context.startActivity(intent);
+            }
     public static boolean performFinishActivity(Activity activity, boolean forceNavigateUp) {
         if (activity == null) {
             return false;
@@ -290,24 +299,6 @@ public class ActivityHelper {
         }
         activity.finish();
         return true;
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public static void openChangeDetailsByUri(
-            Context context, Uri uri, boolean hasParent, boolean hasForceUp) {
-        Intent intent = new Intent(context, ChangeDetailsActivity.class);
-
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_DOCUMENT);
-        } else {
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_WHEN_TASK_RESET);
-        }
-        intent.putExtra(Constants.EXTRA_FORCE_SINGLE_PANEL, true);
-        intent.putExtra(Constants.EXTRA_HAS_PARENT, hasParent);
-        intent.putExtra(Constants.EXTRA_HAS_FORCE_UP, hasForceUp);
-        intent.setData(uri);
-        context.startActivity(intent);
     }
 
     public static void openChangeDetails(Context context, ChangeInfo change,
