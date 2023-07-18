@@ -144,8 +144,37 @@ public class ActivityHelper {
                     .setData(Uri.fromParts("http", "", null));
 
             if (excludeRview) {
-                getCustomTabsPackages(ctx);
-                ctx.startActivity(getCustomTabsPackages(ctx,));
+                // Use a different url to find all the browsers activities
+                Intent test = new Intent(Intent.ACTION_VIEW, Uri.parse("http://www.google.es"));
+                PackageManager pm = ctx.getPackageManager();
+                List<ResolveInfo> activities = pm.queryIntentActivities(
+                        test, PackageManager.MATCH_DEFAULT_ONLY);
+
+                List<Intent> targetIntents = new ArrayList<>();
+                for (ResolveInfo ri : activities) {
+                    if (!ri.activityInfo.packageName.equals(ctx.getPackageName())) {
+                        Intent i = new Intent(Intent.ACTION_VIEW, uri);
+                        i.setPackage(ri.activityInfo.packageName);
+                        i.putExtra(Constants.EXTRA_SOURCE, ctx.getPackageName());
+                        i.putExtra(Constants.EXTRA_FORCE_SINGLE_PANEL, true);
+                        targetIntents.add(i);
+                    }
+                }
+
+                switch (targetIntents.size()) {
+                    case 0:
+                        throw new ActivityNotFoundException();
+                    case 1:
+                        ctx.startActivity(targetIntents.get(0));
+                        break;
+                    default:
+                        Intent chooserIntent = Intent.createChooser(
+                                intent, ctx.getString(R.string.action_open_with));
+                        chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS,
+                                targetIntents.toArray(new Parcelable[]{}));
+                        ctx.startActivity(chooserIntent);
+                        break;
+                }
             } else {
                 ctx.startActivity(intent);
             }
