@@ -75,7 +75,7 @@
                             android:textColor="?android:attr/textColorPrimary"
                             android:text="@string/account_wizard_account_page_authenticated_access"/>
 
-                        <androidx.appcompat.widget.SwitchCompat
+                        <com.google.android.material.materialswitch.MaterialSwitch
                             android:id="@+id/access_mode_switcher"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
