@@ -21,7 +21,7 @@ ext {
         androidx_cardview           : '1.0.0',
         androidx_exifinterface      : '1.2.0',
         androidx_legacy             : '1.0.0',
-        material                    : '1.6.1',
+        material                    : '1.9.0',
         play_services_auth          : '18.0.0',
         firebase_core               : '17.4.1',
         firebase_messaging          : '20.1.7',
@@ -72,7 +72,7 @@ allprojects {
         }
         dependencies {
             classpath 'com.android.tools.build:gradle:7.2.2'
-            classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:1.0.4'
+            classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:4.0.0'
         }
     }
 
