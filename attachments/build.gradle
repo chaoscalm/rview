@@ -27,8 +27,8 @@ dependencies {
     }
     api "com.squareup.retrofit2:converter-gson:${libraries.retrofit2}"
     api "com.squareup.retrofit2:adapter-rxjava2:${libraries.retrofit2}"
-    api "com.squareup.okhttp3:okhttp:${libraries.okhttp3}"
-    api "com.squareup.okhttp3:logging-interceptor:${libraries.okhttp3}"
+    api "com.squareup.okhttp3:okhttp:4.11.0"
+    api "com.squareup.okhttp3:logging-interceptor:4.11.0"
     api "com.squareup.okio:okio:${libraries.okio}"
     api "io.reactivex.rxjava2:rxjava:${libraries.rxjava}"
     api "io.reactivex.rxjava2:rxandroid:${libraries.rxandroid}"

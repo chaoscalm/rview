@@ -16,7 +16,7 @@
 
 ext {
     libraries = [
-        androidx_appcompat          : '1.1.0',
+        androidx_appcompat          : '1.6.1',
         androidx_browser            : '1.2.0',
         androidx_cardview           : '1.0.0',
         androidx_exifinterface      : '1.2.0',
@@ -29,7 +29,7 @@ ext {
         gson                        : '2.8.6',
         retrofit2                   : '2.8.1',
         // Keep okHttp in 3.12.x, since 3.13+ requires Android 5
-        okhttp3                     : '3.12.10',
+        okhttp3                     : '4.16.6',
         okio                        : '2.5.0',
         okhttp_digest               : 'f13c5b8f79',
         rxjava                      : '2.2.19',
@@ -71,7 +71,7 @@ allprojects {
 	     }
         }
         dependencies {
-            classpath 'com.android.tools.build:gradle:7.2.2'
+            classpath 'com.android.tools.build:gradle:7.4.0'
             classpath 'com.getkeepsafe.dexcount:dexcount-gradle-plugin:4.0.0'
         }
     }
@@ -105,7 +105,7 @@ subprojects {
 
         if (project.plugins.hasPlugin('android') || project.plugins.hasPlugin('android-library')) {
             android {
-                compileSdk 33
+                compileSdkVersion 34
 
                  defaultConfig {
                     minSdk 31
@@ -115,8 +115,8 @@ subprojects {
                 }
 
                 compileOptions {
-                    sourceCompatibility = JavaVersion.VERSION_1_8
-                    targetCompatibility = JavaVersion.VERSION_1_8
+                    sourceCompatibility = JavaVersion.VERSION_11
+                    targetCompatibility = JavaVersion.VERSION_11
                 }
 
                 packagingOptions {
