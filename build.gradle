@@ -55,7 +55,7 @@ ext {
         hamcrest                    : '2.2',
         mockito                     : '3.3.3',
         powermock                   : '2.0.7',
-        robolectric                 : '4.3.1',
+        robolectric                 : '4.11.1',
         base64                      : '2.3.9'
     ]
 }
