@@ -86,7 +86,7 @@
                 android:layout_height="24dp"
                 android:cropToPadding="true"
                 app:bindDrawable="@{model.isAccountExpanded ? @drawable/ic_arrow_drop_up : @drawable/ic_arrow_drop_down}"
-                android:tint="?colorSecondary"
+                app:tint="?colorSecondary"
                 android:layout_gravity="center_vertical"
                 android:onClick="@{handlers::onSwitcherPressed}"
                 android:background="?attr/selectableItemBackgroundBorderless"

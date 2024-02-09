@@ -54,7 +54,7 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginLeft="8dp"
                 app:bindAttachmentResourceDrawable="@{icon}"
-                android:tint="@color/attachmentItemTint"
+                app:tint="@color/attachmentItemTint"
                 android:visibility="@{safeUnbox(icon) == 0 ? View.INVISIBLE : View.VISIBLE}"
                 tools:ignore="ContentDescription" />
             <LinearLayout
@@ -96,7 +96,7 @@
                 android:layout_marginRight="5dp"
                 android:padding="3dp"
                 app:srcCompat="@drawable/ic_logout"
-                android:tint="@color/attachmentItemTint"
+                app:tint="@color/attachmentItemTint"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:visibility="@{account == null ? View.GONE : View.VISIBLE}"
                 android:onClick="@{handlers::onProviderSignoff}"

@@ -75,7 +75,7 @@
                     android:layout_gravity="center_horizontal"
                     app:bindDrawable="@{model.status.equals(ChangeStatus.MERGED) ? @drawable/ic_merged : model.status.equals(ChangeStatus.ABANDONED) ? @drawable/ic_abandoned : model.status.equals(ChangeStatus.DRAFT) ? @drawable/ic_draft : null}"
                     android:visibility="@{model.status.equals(ChangeStatus.MERGED) || model.status.equals(ChangeStatus.ABANDONED) || model.status.equals(ChangeStatus.DRAFT) ? View.VISIBLE : View.GONE}"
-                    android:tint="@color/primaryDarkForeground"
+                    app:tint="@color/primaryDarkForeground"
                     android:contentDescription="@null"/>
                 <com.ruesga.rview.widget.StyleableTextView
                     android:layout_width="wrap_content"
@@ -179,7 +179,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         app:srcCompat="@drawable/ic_folder"
-                        android:tint="@color/secondaryIconColor"
+                        app:tint="@color/secondaryIconColor"
                         android:layout_marginEnd="4dp"
                         android:layout_marginRight="4dp"
                         tools:ignore="ContentDescription"/>
@@ -204,7 +204,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         app:srcCompat="@drawable/ic_branch"
-                        android:tint="@color/secondaryIconColor"
+                        app:tint="@color/secondaryIconColor"
                         android:layout_marginEnd="4dp"
                         android:layout_marginRight="4dp"
                         tools:ignore="ContentDescription"/>
@@ -229,7 +229,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         app:srcCompat="@drawable/ic_stats"
-                        android:tint="@color/secondaryIconColor"
+                        app:tint="@color/secondaryIconColor"
                         android:layout_marginEnd="4dp"
                         android:layout_marginRight="4dp"
                         tools:ignore="ContentDescription"/>
@@ -265,7 +265,7 @@
                         android:layout_width="16dp"
                         android:layout_height="16dp"
                         app:srcCompat="@drawable/ic_warning"
-                        android:tint="@color/accent"
+                        app:tint="@color/accent"
                         android:layout_marginEnd="4dp"
                         android:layout_marginRight="4dp"
                         tools:ignore="ContentDescription"/>

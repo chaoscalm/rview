@@ -44,7 +44,7 @@
             android:layout_height="20dp"
             android:layout_marginRight="8dp"
             android:layout_marginEnd="8dp"
-            android:tint="@color/primaryDarkForeground"
+            app:tint="@color/primaryDarkForeground"
             android:src="@{model.id() == -2 ? @drawable/ic_up : (model.isDashboard() ? @drawable/ic_dashboard : @drawable/ic_folder)}"
             tools:ignore="ContentDescription" />
 

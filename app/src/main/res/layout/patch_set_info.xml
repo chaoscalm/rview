@@ -299,7 +299,7 @@
                         android:layout_toEndOf="@id/patchset_description"
                         android:layout_toRightOf="@id/patchset_description"
                         android:background="?attr/selectableItemBackgroundBorderless"
-                        android:tint="@color/accent"
+                        app:tint="@color/accent"
                         android:onClick="@{handlers::onEditRevisionDescriptionPressed}"
                         android:visibility="@{(safeUnbox(isOwner) &amp;&amp; (change.status.equals(ChangeStatus.NEW) || change.status.equals(ChangeStatus.DRAFT))) ? View.VISIBLE : View.GONE}"
                         tools:ignore="ContentDescription"/>

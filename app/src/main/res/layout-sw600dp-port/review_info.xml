@@ -94,7 +94,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 app:srcCompat="@drawable/ic_send"
-                                android:tint="?attr/colorAccent"
+                                app:tint="?attr/colorAccent"
                                 android:background="?attr/selectableItemBackgroundBorderless"
                                 android:onClick="@{handlers::onReviewPressed}"
                                 android:scaleType="centerInside"

@@ -31,6 +31,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.annotation.SuppressLint;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
@@ -142,10 +143,11 @@ public class AttachmentDropView extends View implements View.OnDragListener {
         try (Cursor c = cr.query(attachment.mLocalUri, null, null, null, null)) {
             if (c != null) {
                 c.moveToFirst();
+		@SuppressLint("Range") int columnNameIndex = c.getColumnIndex(OpenableColumns.DISPLAY_NAME);
+		@SuppressLint("Range") int columnSizeIndex = c.getColumnIndex(OpenableColumns.SIZE);
                 attachment.mName = new File(
-                        c.getString(
-                                c.getColumnIndex(OpenableColumns.DISPLAY_NAME))).getName();
-                attachment.mSize = c.getLong(c.getColumnIndex(OpenableColumns.SIZE));
+                        c.getString(columnNameIndex)).getName();
+                attachment.mSize = c.getLong(columnSizeIndex);
             }
         }
     }

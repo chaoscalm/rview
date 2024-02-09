@@ -45,7 +45,7 @@
                 android:layout_width="@dimen/pager_controller_chevron_size"
                 android:layout_height="@dimen/pager_controller_chevron_size"
                 app:srcCompat="@drawable/ic_chevron_left"
-                android:tint="@android:color/white"
+                app:tint="@android:color/white"
                 tools:ignore="ContentDescription" />
             <com.ruesga.rview.widget.StyleableTextView
                 android:layout_width="0dp"
@@ -90,7 +90,7 @@
                 android:layout_width="@dimen/pager_controller_chevron_size"
                 android:layout_height="@dimen/pager_controller_chevron_size"
                 app:srcCompat="@drawable/ic_chevron_right"
-                android:tint="@android:color/white"
+                app:tint="@android:color/white"
                 tools:ignore="ContentDescription" />
         </LinearLayout>
     </LinearLayout>

@@ -91,7 +91,7 @@
             android:tag="settings"
             android:onClick="@{handlers::onAttachmentChooser}"
             app:srcCompat="@drawable/ic_settings"
-            android:tint="?attr/colorPrimaryDark"
+            app:tint="?attr/colorPrimaryDark"
             android:background="?attr/selectableItemBackgroundBorderless"
             tools:ignore="ContentDescription"/>
     </com.google.android.flexbox.FlexboxLayout>
