@@ -23,5 +23,5 @@ jobs:
           java-version: '11'
 
       - name: Run Lint checks and tests
-        run: ./gradlew --no-daemon --parallel clean lintGmsDebug testGmsDebug lintFlossDebug testFlossDebug
+        run: ./gradlew --no-daemon --stacktrace --parallel clean lintGmsDebug testGmsDebug lintFlossDebug testFlossDebug
 
