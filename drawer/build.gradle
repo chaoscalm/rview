@@ -26,6 +26,7 @@ dependencies {
 
 
 android {
+    namespace "com.ruesga.rview.drawer"
     defaultConfig {
         vectorDrawables.useSupportLibrary = true
         consumerProguardFiles file('proguard-consumer.txt')

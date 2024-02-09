@@ -43,6 +43,7 @@ android {
         return void
     }
 
+    namespace "com.ruesga.rview.attachments"
     flavorDimensions("privacy")
     productFlavors {
         gms {

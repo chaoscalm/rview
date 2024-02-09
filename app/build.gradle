@@ -68,6 +68,7 @@ android {
 }
 
 android {
+    namespace "com.ruesga.rview"
     defaultConfig {
         versionCode 68
         versionName '2.4.1'

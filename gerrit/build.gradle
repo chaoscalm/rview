@@ -39,6 +39,7 @@ dependencies {
 }
 
 android {
+    namespace "com.ruesga.rview.gerrit"
     defaultConfig {
         consumerProguardFiles file('proguard-consumer.txt')
 
