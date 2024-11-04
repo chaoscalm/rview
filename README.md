@@ -1,11 +1,11 @@
 Rview
 =====
 
-### Description [![Build Status](https://travis-ci.org/jruesga/rview.svg?branch=master)](https://travis-ci.org/jruesga/rview/branches) [![GitHub release](https://img.shields.io/github/release/jruesga/rview.svg)](https://github.com/jruesga/rview/releases/latest) [![Apache 2.0](https://img.shields.io/github/license/jruesga/rview.svg)](http://www.apache.org/licenses/LICENSE-2.0)
+### Description [![GitHub release](https://img.shields.io/github/release/jruesga/rview.svg)](https://github.com/jruesga/rview/releases/latest) [![Apache 2.0](https://img.shields.io/github/license/jruesga/rview.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 
 A Gerrit client application  for Android
 
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.ruesga.rview "Get it on Google Play")
+[![Get it on F-Droid](https://f-droid.org/assets/fdroid-logo-text_S0MUfk_FsnAYL7n2MQye-34IoSNm6QM6xYjDnMqkufo=.svg)](https://f-droid.org/en/packages/com.ruesga.rview/ "Get it on F-Droid")
 
 
 ### Features
