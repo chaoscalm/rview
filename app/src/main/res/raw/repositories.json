@@ -57,6 +57,7 @@
   {"name":"KDE", "url":"https://gerrit.vesnicky.cesnet.cz/r/", "ci_accounts": "^(.*Zuul.*)$"},
   {"name":"Kitware", "url":"http://review.source.kitware.com/", "ci_accounts": "^(Kitware Build Robot)$"},
   {"name":"KorAP", "url":"https://korap.ids-mannheim.de/gerrit/"},
+  {"name":"LeafOS", "url":"https://review.leafos.org/"},
   {"name":"LibreOffice", "url":"https://gerrit.libreoffice.org/", "ci_accounts": "^(Jenkins)$"},
   {"name":"Linaro", "url":"https://review.linaro.org/", "ci_accounts": "^(lava-bot)$"},
   {"name":"Linaro MLPlatform", "url":"https://review.mlplatform.org/", "ci_accounts": "^(.*Jenkins|.*robot)$"},
