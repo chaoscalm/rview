@@ -11,7 +11,6 @@
   {"name":"AOSCP", "url":"https://gerrit.cypheros.co/"},
   {"name":"AOSPExtended", "url":"http://gerrit.aospextended.com/"},
   {"name":"AquariOS", "url":"https://review.aquarios.net/"},
-  {"name":"ArrowOS", "url":"https://review.arrowos.net/"},
   {"name":"Asterisk", "url":"https://gerrit.asterisk.org/", "ci_accounts": "^(Zuul The Gatekeeper|Jenkins2)$"},
   {"name":"Asterisk DB", "url":"https://asterix-gerrit.ics.uci.edu/"},
   {"name":"Automotive Linux", "url":"https://gerrit.automotivelinux.org/gerrit/", "ci_accounts": "^(Jenkins Job .*)$"},
